@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://rota.agency/sitemap-index.xml
