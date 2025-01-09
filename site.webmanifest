@@ -1,0 +1,15 @@
+{
+  "name": "Qul - Transforming Lives Through Compassion",
+  "short_name": "Qul",
+  "icons": [
+    {
+      "src": "/images/Logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "display": "standalone"
+}

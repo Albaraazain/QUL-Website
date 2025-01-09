@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://qul.org.pk/sitemap-index.xml
