@@ -186,6 +186,30 @@
 		.block__image-text .block__image-text__content strong {
 			color: var(--lightest);
 		}
+		
+		/* Fix for team image display */
+		.block__image-text__image img[data-astro-cid-dohjnao5] {
+			display: block;
+			max-width: 100%;
+			height: auto;
+			transition: transform 0.5s var(--cubic);
+		}
+		
+		.block__image-text__image:hover img[data-astro-cid-dohjnao5] {
+			transform: scale(1.02);
+		}
+		
+		/* Responsive improvements */
+		@media only screen and (max-width: 768px) {
+			.block__image-text__image {
+				margin-top: 2rem;
+				min-height: 300px !important;
+			}
+			
+			.block__image-text__image img[data-astro-cid-dohjnao5] {
+				object-position: center;
+			}
+		}
 	</style>
 	<script type="module">typeof window < "u" && window.addEventListener("scroll", () => { const e = document.getElementById("header"); window.scrollY > 100 ? e.classList.add("sticky") : e.classList.remove("sticky") });
 	</script>
@@ -264,8 +288,8 @@
 						</div>
 						<!-- Image Section -->
 						<div class="column column-m-12 column-t-6" data-astro-cid-mknrx3il>
-							<div class="block__image-text__image" style="height: auto; min-height: 400px;" data-astro-cid-mknrx3il>
-								<img src="../images/team.png" alt="Our Team" style="object-fit: contain;" data-astro-cid-dohjnao5>
+							<div class="block__image-text__image" style="height: auto; min-height: 400px; display: flex; align-items: center; justify-content: center;" data-astro-cid-mknrx3il>
+								<img src="../images/team.png" alt="Our Team" style="object-fit: cover; width: 100%; max-height: 100%; border-radius: 20px;" data-astro-cid-dohjnao5>
 							</div>
 						</div>
 					</div>
@@ -327,7 +351,7 @@
 		</div>
 	</main>
 	<footer class="footer" role="contentinfo" data-astro-cid-sz7xmlte>
-		<span class="footer__scroll" data-astro-cid-sz7xmlte>Hope for All</span>
+		<span class="footer__scroll" style="top: 8rem; padding-top: 10rem;" data-astro-cid-sz7xmlte>Hope for All</span>
 		<div class="footer__top" data-astro-cid-sz7xmlte>
 			<div class="footer__top__left" data-astro-cid-sz7xmlte>
 				<img src="../images/eye.svg" alt="" data-astro-cid-sz7xmlte>
