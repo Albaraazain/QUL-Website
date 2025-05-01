@@ -179,6 +179,13 @@
 			opacity: 0.7;
 			filter: brightness(0) invert(1) !important;
 		}
+
+		/* Fix for Our Story section text color */
+		.block__image-text .block__image-text__content h2,
+		.block__image-text .block__image-text__content p,
+		.block__image-text .block__image-text__content strong {
+			color: var(--lightest);
+		}
 	</style>
 	<script type="module">typeof window < "u" && window.addEventListener("scroll", () => { const e = document.getElementById("header"); window.scrollY > 100 ? e.classList.add("sticky") : e.classList.remove("sticky") });
 	</script>
