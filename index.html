@@ -31,16 +31,29 @@
 	<link rel="stylesheet" href="_astro/_page_.iCPGKRWm.css">
 	<script type="module">typeof window < "u" && window.addEventListener("scroll", () => { const e = document.getElementById("header"); window.scrollY > 100 ? e.classList.add("sticky") : e.classList.remove("sticky") });
 	</script>
+	<style>
+		/* Fix for logo in header to ensure it's white */
+		.header--dark .logo img[data-astro-cid-3ef6ksr2],
+		.header--light .logo img[data-astro-cid-3ef6ksr2] {
+			filter: brightness(0) invert(1) !important;
+			transition: opacity 0.3s ease;
+		}
+		.header--dark .logo:hover img[data-astro-cid-3ef6ksr2],
+		.header--light .logo:hover img[data-astro-cid-3ef6ksr2] {
+			opacity: 0.7;
+			filter: brightness(0) invert(1) !important;
+		}
+	</style>
 </head>
 
 <body class="home" x-data="{ isActive: false }" :class="{ 'body-active': isActive }">
-	<header id="header" role="banner" class="header header--light" x-data="{ isActive: false }" data-astro-cid-3ef6ksr2>
+	<header id="header" role="banner" class="header header--dark" x-data="{ isActive: false }" data-astro-cid-3ef6ksr2>
 		<div class="container" data-astro-cid-3ef6ksr2>
 			<div class="row row--justified row--middle" data-astro-cid-3ef6ksr2>
 				<div class="column column-m-12" data-astro-cid-3ef6ksr2>
 					<div class="row row--justified row--middle" data-astro-cid-3ef6ksr2> <a href="index.html"
 							class="logo" data-astro-cid-3ef6ksr2>
-							<img src="images/Logo.svg" alt="Logo" width="85" height="85" loading="eager" fetchpriority="high" data-astro-cid-3ef6ksr2>
+							<img src="images/Logo.svg" alt="Logo" width="85" height="85" loading="eager" fetchpriority="high" style="filter: brightness(0) invert(1);" data-astro-cid-3ef6ksr2>
 						</a>
 						<nav :class="{ 'mobile-menu-active': isActive }" data-astro-cid-3ef6ksr2>
 							<ul data-astro-cid-3ef6ksr2>
