@@ -37,3 +37,5 @@ yarn-error.log*
 # System Files
 Thumbs.db
 .vercel
+
+**/.claude/settings.local.json
