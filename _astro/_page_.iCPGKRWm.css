@@ -23,7 +23,10 @@
 .block__hero[data-astro-cid-e7a3tnr5] .container[data-astro-cid-e7a3tnr5] {
   height: inherit;
   position: relative;
-  top: -50px;
+  top: 0; /* Changed from -50px to 0 */
+}
+.block__hero__content[data-astro-cid-e7a3tnr5] {
+  padding-bottom: 80px; /* Added padding to push content down */
 }
 .block__hero__scroll[data-astro-cid-e7a3tnr5] {
   position: absolute;
