@@ -33,12 +33,19 @@
 	</script>
 	<style>
 		/* Fix for logo in header to ensure it's white */
-		.header--dark .logo img[data-astro-cid-3ef6ksr2],
+		.header--dark .logo img[data-astro-cid-3ef6ksr2] {
+			filter: brightness(1) invert(0) !important;
+			transition: opacity 0.3s ease;
+		}
+
 		.header--light .logo img[data-astro-cid-3ef6ksr2] {
 			filter: brightness(0) invert(1) !important;
 			transition: opacity 0.3s ease;
 		}
-		.header--dark .logo:hover img[data-astro-cid-3ef6ksr2],
+		.header--dark .logo:hover img[data-astro-cid-3ef6ksr2]{
+			opacity: 0.7;
+			filter: brightness(1) invert(0) !important;
+		}
 		.header--light .logo:hover img[data-astro-cid-3ef6ksr2] {
 			opacity: 0.7;
 			filter: brightness(0) invert(1) !important;
@@ -57,10 +64,10 @@
 						</a>
 						<nav :class="{ 'mobile-menu-active': isActive }" data-astro-cid-3ef6ksr2>
 							<ul data-astro-cid-3ef6ksr2>
-								<li data-astro-cid-3ef6ksr2> <a href="#work" data-astro-cid-3ef6ksr2>Our Impact</a> </li>
-								<li data-astro-cid-3ef6ksr2> <a href="about/index.html" data-astro-cid-3ef6ksr2>About Us</a> </li>
-								<li data-astro-cid-3ef6ksr2> <a href="contact/index.html" data-astro-cid-3ef6ksr2>Contact</a> </li>
-								<li data-astro-cid-3ef6ksr2> <a href="donate/index.html" target="_blank" rel="noopener" data-astro-cid-3ef6ksr2>Donate Now</a> </li>
+								<li data-astro-cid-3ef6ksr2> <a href="#work" data-astro-cid-3ef6ksr2 style="color:black !important">Our Impact</a> </li>
+								<li data-astro-cid-3ef6ksr2> <a href="about/index.html" data-astro-cid-3ef6ksr2 style="color:black !important">About Us</a> </li>
+								<li data-astro-cid-3ef6ksr2> <a href="contact/index.html" data-astro-cid-3ef6ksr2 style="color:black !important" >Contact</a> </li>
+								<li data-astro-cid-3ef6ksr2> <a href="donate/index.html" target="_blank" rel="noopener" data-astro-cid-3ef6ksr2 style="color:black !important">Donate Now</a> </li>
 							</ul>
 						</nav> <button aria-label="Menu Toggle" class="menu-toggle" :class="{ 'active': isActive }"
 							@click="isActive = !isActive; document.body.classList.toggle('mobile-menu-active', isActive)"
@@ -78,7 +85,7 @@
 	</header>
 	<main>
 		<div style="z-index: 5; position: relative;">
-			<section class="block block__hero " data-cursor="-inverse" style="background-image: url('/images/refuge_in_rain.png'); background-size: cover; background-position: center; background-repeat: no-repeat; color: #ffffff; position: relative;" data-astro-cid-e7a3tnr5>
+			<section class="block block__hero " data-cursor="-inverse" style="background-image: url('/images/two_hands_for_help.png'); background-size: cover; background-position: center; background-repeat: no-repeat; color: #ffffff; position: relative;" data-astro-cid-e7a3tnr5>
 				<span class="block__hero__scroll" style="color: #ffffff;" data-astro-cid-e7a3tnr5>Hope for All</span>
 				<div class="container" style="position: relative; z-index: 2;" data-astro-cid-e7a3tnr5>
 					<div class="row row--bottom" data-astro-cid-e7a3tnr5>
